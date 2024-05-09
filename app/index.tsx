@@ -40,11 +40,26 @@ export default function HomeScreen() {
 
 function TodoList(props: { todos: TodoEntity[] }) {
   return <FlatList
+    contentContainerStyle={{
+      height: "100%",
+      width: "100%",
+    }}
     keyExtractor={(item) => item.id}
     data={props.todos}
     ItemSeparatorComponent={() => <View style={{
       height: 8,
     }} />}
+    ListEmptyComponent={() => <View style={{
+      height: "100%",
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}>
+      <Text style={{
+        textAlign: "center"
+      }}>No records available</Text>
+    </View>}
     renderItem={({ item: todo }) => (<TodoItem todo={todo} key={todo.id} />)} style={{
       paddingHorizontal: 16
     }} />;
