@@ -1,7 +1,7 @@
 import TodoEntity from "@/model/TodoEntity";
 import { useDatabase } from "@nozbe/watermelondb/react";
 import { router } from "expo-router";
-import { ToastAndroid, View } from "react-native";
+import { ToastAndroid } from "react-native";
 import Clipboard from '@react-native-clipboard/clipboard';
 import { Card, IconButton, TouchableRipple, Text } from "react-native-paper";
 

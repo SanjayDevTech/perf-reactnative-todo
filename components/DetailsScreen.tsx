@@ -1,11 +1,10 @@
 
-import { Appbar, FAB, Surface, Text, TextInput, useTheme } from 'react-native-paper';
+import { Appbar, FAB, Surface, TextInput, useTheme } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import { router } from 'expo-router';
 import TodoEntity from '@/model/TodoEntity';
-import { compose, useDatabase, withDatabase, withObservables } from '@nozbe/watermelondb/react';
-import { Database, Q } from '@nozbe/watermelondb';
-import { Observable } from '@nozbe/watermelondb/utils/rx';
+import { useDatabase, withDatabase, withObservables } from '@nozbe/watermelondb/react';
+import { Database } from '@nozbe/watermelondb';
 import { useState } from 'react';
 
 const enhance = withObservables([], (props: { database: Database, id: string }) => ({

@@ -1,7 +1,7 @@
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useEffect, useMemo } from 'react';
-import { Slot, Stack } from 'expo-router';
+import { Slot } from 'expo-router';
 import { Material3ThemeProvider } from '@/components/Material3ThemeProvider';
 import Todo from '@/model/TodoEntity';
 import { DatabaseProvider } from '@nozbe/watermelondb/react';

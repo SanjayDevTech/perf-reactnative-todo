@@ -1,10 +1,10 @@
 
-import { Appbar, Avatar, Button, Card, FAB, Icon, IconButton, List, Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import { Appbar, FAB, Surface, Text, useTheme } from 'react-native-paper';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { router, useNavigation } from 'expo-router';
 import { useEffect } from 'react';
 import { compose, withDatabase, withObservables } from '@nozbe/watermelondb/react';
-import { Database, Model, Query } from '@nozbe/watermelondb';
+import { Database } from '@nozbe/watermelondb';
 import TodoEntity from '@/model/TodoEntity';
 import { Observable } from '@nozbe/watermelondb/utils/rx';
 import TodoItem from '@/components/TodoItem';
