@@ -4,7 +4,7 @@ I have created the same Todo app in different frameworks.
 This is one of them.
 
 ## All frameworks github links:
-- [Android Compose](https://github.com/SanjayDevTech/perf-android-compose-todo)
+- [Android Compose](https://github.com/SanjayDevTech/perf-compose-todo)
 - [Flutter](https://github.com/SanjayDevTech/perf-flutter-todo)
 - [React Native](https://github.com/SanjayDevTech/perf-reactnative-todo)
 
