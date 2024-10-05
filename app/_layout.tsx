@@ -1,6 +1,4 @@
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Slot } from 'expo-router';
 import { Material3ThemeProvider } from '@/components/Material3ThemeProvider';
 import Todo from '@/model/TodoEntity';
@@ -26,28 +24,12 @@ const adapter = new SQLiteAdapter({
   }
 })
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
 export default function RootLayout() {
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
 
   const database = useMemo(() => new Database({
     adapter,
     modelClasses: [Todo],
   }), []);
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
 
   return (
     <DatabaseProvider database={database}>
